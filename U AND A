@@ -1,0 +1,56 @@
+#!name=合集
+#!desc=Obliviate
+
+[Rule]
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+DOMAIN,acs4baichuan.m.taobao.com,REJECT
+DOMAIN,h5.uyxy.xin,REJECT
+DOMAIN,log-api.pangolin-sdk-toutiao.com,REJECT
+DOMAIN,p3-be-pack-sign.pglstatp-toutiao.com,REJECT
+DOMAIN,p6-be-pack-sign.pglstatp-toutiao.com,REJECT
+DOMAIN,tnc3-bjlgy.zijieapi.com,REJECT
+DOMAIN,ocsp.digicert.com,REJECT
+DOMAIN,mon.zijieapi.com,REJECT
+DOMAIN,log-api.pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN,mpush-api.aliyun.com,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+DOMAIN,userlink.alicdn.com,REJECT
+DOMAIN,pingma.qq.com,REJECT
+DOMAIN,toblog.ctobsnssdk.com,REJECT
+DOMAIN,dm.toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN,p26-be-pack-sign.pglstatp-toutiao.com,REJECT
+DOMAIN,p9-be-pack-sign.pglstatp-toutiao.com,REJECT
+DOMAIN,adashbc.ut.taobao.com,REJECT
+DOMAIN,plbslog.umeng.com,REJECT
+DOMAIN,track.mta.qq.com,REJECT
+DOMAIN,bugly.qq.com,REJECT
+DOMAIN,adashxgc.ut.taobao.com,REJECT
+DOMAIN,beacon-api.aliyuncs.com,REJECT
+DOMAIN,tnc3-aliec2.zijieapi.com,REJECT
+DOMAIN,mssdk-bu.bytedance.com,REJECT
+DOMAIN,ddns.uyxy.xin,REJECT
+DOMAIN,mobads.baidu.com,REJECT
+DOMAIN,baichuan-sdk.taobao.com,REJECT
+DOMAIN,dgstatic.jd.com,REJECT
+DOMAIN,dg.k.jd.com,REJECT
+DOMAIN,mazu.m.qq.com,REJECT
+DOMAIN,umdc.aliapp.org,REJECT
+DOMAIN,log.umsns.com,REJECT
+DOMAIN,qzs.gdtimg.com,REJECT
+DOMAIN,dm-hl.toutiao.com,REJECT
+DOMAIN,tnc3-alisc1.zijieapi.com,REJECT
+DOMAIN,kepler.jd.com,REJECT
+DOMAIN,baichuan-sdk.alicdn.com,REJECT
+DOMAIN,orbit.jd.com,REJECT
+DOMAIN,amdc.m.taobao.com,REJECT
+IP-CIDR,47.102.253.50/32,REJECT,no-resolve
+
+[Script]
+# > 阿里云盘签到
+阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.aliyundrive.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+阿里云盘签到 = type=cron,cronexp="0 10 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+[MITM]
+hostname = %APPEND% auth.aliyundrive.com
