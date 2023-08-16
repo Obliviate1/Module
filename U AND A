@@ -10,7 +10,6 @@ DOMAIN,log-api.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,p3-be-pack-sign.pglstatp-toutiao.com,REJECT
 DOMAIN,p6-be-pack-sign.pglstatp-toutiao.com,REJECT
 DOMAIN,tnc3-bjlgy.zijieapi.com,REJECT
-DOMAIN,ocsp.digicert.com,REJECT
 DOMAIN,mon.zijieapi.com,REJECT
 DOMAIN,log-api.pangolin-sdk-toutiao-b.com,REJECT
 DOMAIN,mpush-api.aliyun.com,REJECT
