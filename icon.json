@@ -1,1 +1,1 @@
-{"name": "Icon Gallery", "description": "收集互联网公开图标文件，版权属于原作者和商标持有人。", "icons": [{"name": "ali.png", "url": "https://github.com/Obliviate1/Module/blob/main/alicloud.png"}, {"name": "tecent.png", "url": "https://github.com/Obliviate1/Module/blob/main/tecentcloud.png"}]}
+{"name": "Icon Gallery", "description": "收集互联网公开图标文件，版权属于原作者和商标持有人。", "icons": [{"name": "ali.png", "url": "https://raw.githubusercontent.com/Obliviate1/Module/main/alicloud.png"}, {"name": "tecent.png", "url": "https://raw.githubusercontent.com/Obliviate1/Module/main/tecentcloud.png"}]}
